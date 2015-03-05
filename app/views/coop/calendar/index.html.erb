@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calendars</h1>
+
+<nav>
+  <ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li>Selector</li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</nav>
+
+<table>
+  <thead>
+    <tr>
+      <% Date::DAYNAMES.each do |day| %>
+        <th><%= day %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% firstday = Date.new(@year, @month, 1) %>
+    <% lastday = Date.new(@year, @month, -1) %>
+    <% firstdow = firstday.wday %>
+
+    <tr>
+      <% if firstdow != 0 then %>
+        <td colspan="<%= firstdow %>"></td>
+      <% end %>
+
+      <% (firstday..lastday).each do |day| %>
+        <td>
+          <div class="cal_date"><%= day.day %></div>
+
+          <% @events[day].each do |event| %>
+            <%= event.name %>
+          <% end %>
+        </td>
+
+        <% if day.wday == 6 && day != lastday then %>
+            </tr><tr>
+        <% end %>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

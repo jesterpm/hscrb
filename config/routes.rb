@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   scope ':slug', as: 'coop', module: 'coop' do
       root 'home#view'
+
+      resources :calendar
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
