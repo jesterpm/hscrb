@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coop_id: 
+  start: 2015-03-02
+  publish: 2015-03-02
+  lockclassinfo: 2015-03-02
+  waitlistopen: 2015-03-02
+  name: MyString
+
+two:
+  coop_id: 
+  start: 2015-03-02
+  publish: 2015-03-02
+  lockclassinfo: 2015-03-02
+  waitlistopen: 2015-03-02
+  name: MyString

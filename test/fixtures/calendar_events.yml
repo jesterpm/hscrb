@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year_id: 
+  type: 1
+  name: MyString
+  shortname: MyString
+  date: 2015-03-02
+  quarter: 1
+  details: MyText
+
+two:
+  year_id: 
+  type: 1
+  name: MyString
+  shortname: MyString
+  date: 2015-03-02
+  quarter: 1
+  details: MyText
